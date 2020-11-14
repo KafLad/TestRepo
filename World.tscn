@@ -18,3 +18,8 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( -2.73291, 1.89202 )
 shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -186.434, -204.479, -388.668, -186.661, -460.83, 5.77332, -182.87, 75.2634, -107.144, -72.6258, -218.506, -136.77 )
