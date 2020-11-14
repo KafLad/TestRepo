@@ -12,6 +12,7 @@ func _physics_process(delta):
 	else:
 		apply_movement(axis * ACCELERATION * delta)
 	motion = move_and_slide(motion)
+	look_at(get_global_mouse_position())
 
 func get_input_axis():
 	var axis = Vector2.ZERO
