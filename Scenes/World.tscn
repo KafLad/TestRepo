@@ -5,7 +5,7 @@
 [ext_resource path="res://Sprites/block.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Wall.tres" type="TileSet" id=4]
 [ext_resource path="res://Sprites/light.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/SheepMovement.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/SheepMovement.gd" type="Script" id=6]
 [ext_resource path="res://Sprites/sheepPlaceholder-Sheet.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -42,8 +42,8 @@ animations = [ {
 [node name="Node2D" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
-modulate = Color( 0.117647, 0.301961, 0.145098, 1 )
-position = Vector2( -0.0641165, 0.186523 )
+modulate = Color( 0.129412, 0.533333, 0.188235, 1 )
+position = Vector2( -8.54947, 198.176 )
 scale = Vector2( 694.297, 384.534 )
 texture = ExtResource( 3 )
 
@@ -58,15 +58,8 @@ texture = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="PlayerInputTest"]
 current = true
+zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
-
-[node name="Light2D" type="Light2D" parent="PlayerInputTest"]
-scale = Vector2( 1.05, 1.05 )
-texture = ExtResource( 5 )
-energy = 0.84
-shadow_enabled = true
-shadow_buffer_size = 5000
-shadow_filter = 5
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
@@ -93,4 +86,14 @@ frames = SubResource( 7 )
 [node name="Timer" type="Timer" parent="Sheep"]
 wait_time = 2.5
 autostart = true
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -1305.67, 408.683 )
+scale = Vector2( 0.0596368, 0.0624249 )
+enabled = false
+texture = ExtResource( 5 )
+energy = 1.17
+shadow_enabled = true
+shadow_buffer_size = 5000
+shadow_filter = 5
 [connection signal="timeout" from="Sheep/Timer" to="Sheep" method="_on_Timer_timeout"]

@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Test Repo_Project"
+config/name="Sheep_Game"
 run/main_scene="res://Scenes/World.tscn"
 config/icon="res://Sprites/icon.png"
 
