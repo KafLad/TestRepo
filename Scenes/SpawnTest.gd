@@ -115,8 +115,8 @@ func calc_master(sheep):
 		calc_alignment()
 		calc_cohesion()
 	else:
-		sheep.flocking = false
-		
+		# sheep.flocking = false
+		pass
 func calc_separation():
 	if separation_factor == 0:
 		return

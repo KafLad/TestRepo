@@ -16,6 +16,11 @@ func get_vel():
 func set_vel(v):
 	vel = v
 
+
+func _ready():
+	vel = Vector2.ZERO
+	pass
+
 func _physics_process(delta):
 	if state == 0:
 		movement.x = 0
