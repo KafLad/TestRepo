@@ -1,8 +1,9 @@
 extends KinematicBody2D
 
+onready var steering = get_node("../../")
 var movement = Vector2()
 var tempState = floor(rand_range(0,9))
-var state = 0
+var state = floor(rand_range(0,9))
 #0: Nothing, 1: right, 2: left, 3: down, 4: up, 5: r&d, 6: r&u, 7: l&d, 8: l&u
 var movementsWithoutRest = 0
 var restChance = 0
@@ -19,6 +20,7 @@ func set_vel(v):
 
 func _ready():
 	vel = Vector2.ZERO
+	print(steering)
 	pass
 
 func _physics_process(delta):
