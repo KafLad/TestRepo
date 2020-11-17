@@ -7,6 +7,14 @@ var state = 0
 var movementsWithoutRest = 0
 var restChance = 0
 var restTimer = 0
+var vel
+
+#setters and getters for boid's individual velocity
+func get_vel():
+	return vel
+
+func set_vel(v):
+	vel = v
 
 func _physics_process(delta):
 	if state == 0:
